@@ -1,0 +1,13 @@
+version: "3.6"
+services:
+  utils_config_service:
+    image: antoniosai/config-service:latest
+    container_name: config-service
+    restart: always
+    ports:
+      - "8080:8000"
+
+networks:
+  microservice_network:
+    external:
+      name: microservice_global_network

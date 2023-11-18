@@ -1,0 +1,16 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: configserver
+  output:
+    ansi:
+      enabled: ALWAYS
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/antoniosai/spring-boot-config-repo-demo
+          searchPaths: "{application}"
+          default-label: master
+    enabled: true
